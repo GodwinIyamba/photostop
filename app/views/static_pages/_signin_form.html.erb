@@ -1,0 +1,16 @@
+<div class="d-flex flex-column justify-content-center align-items-center">
+    <%= form_with url: "/", method: :get, local: true do |f| %>
+        <div class="control-group mb-3">
+            <%= f.label :flickr_id, "Flickr ID" %>
+            <div class="controls">
+                <%= f.text_field :flickr_id, value: params[:flickr_id], class: 'form-contrrol' %>
+            </div>
+        </div>
+    
+        <div class="control-group">
+            <div class="controls">
+                <%= f.submit "Get Photos", class: 'form-label' %>
+            </div>
+        </div>
+    <% end %>
+</div>

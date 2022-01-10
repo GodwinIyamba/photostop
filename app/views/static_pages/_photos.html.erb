@@ -1,0 +1,5 @@
+<% photos.each do |photo| %>
+    <div>
+        <%= image_tag Flickr.url_n(photo), alt: Flickr.url_n(photo) %>
+    </div>
+<% end %>

@@ -1,0 +1,16 @@
+<% if @user %>
+    <h1>Hey, <%= @user %>!</h1>
+    <% if @photos %>
+        <%= render 'photos', photos: @photos %>
+    <% else %>
+        <% if flash[:notice] %>
+            <p><%= flash[:notice] %></p>
+        <% end %>
+    <% end %>
+<% else %>
+  <%= render 'signin_form' %>
+<% end %>
+
+
+
+
